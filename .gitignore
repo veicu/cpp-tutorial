@@ -1,0 +1,5 @@
+*.vcxproj.user
+/src/**/x86/
+/src/**/x64/
+/bin/
+/.vs/
