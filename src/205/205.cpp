@@ -1,21 +1,11 @@
 /*
-    C++11 Delegating Constructors
+    C++11 nullptr keyword
 */
-
-#include <iostream>
 
 class point
 {
 public:
-    point() : point( 0, 0 ) // delegating ctor
-    {
-        std::cout << "CTOR-1" << std::endl;
-    }
-
-    point( int x, int y ) : m_x( x ), m_y( y )
-    {
-        std::cout << "CTOR-2" << std::endl;
-    }
+    point() : m_x( 0 ), m_y( 0 ) {}
 
     ~point() = default;
 
@@ -35,9 +25,21 @@ private:
     int m_y;
 };
 
+void foo( int i )
+{
+
+}
+
+void foo( point* p )
+{
+    if( p != nullptr )
+    {
+
+    }
+}
 
 int main()
 {
-    point p1;
-    point p2( 10, 20 );
+    foo( 0 );
+    foo( nullptr );
 }

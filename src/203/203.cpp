@@ -17,8 +17,8 @@ public:
     point& operator=( point&& )      = delete;
     point& operator=( const point& ) = delete;
 
-    int x() { return m_x; }
-    int y() { return m_y; }
+    int x() const { return m_x; }
+    int y() const { return m_y; }
 
     void x( int p_x ) { m_x = p_x; }
     void y( int p_y ) { m_y = p_y; }

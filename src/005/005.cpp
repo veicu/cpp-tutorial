@@ -1,12 +1,12 @@
 /*
-    Classes
+    Classes - Part I
 */
 
 class point
 {
 public:
 
-    point()
+    point() : m_x( 0 ), m_y( 0 )
     {
 
     }
@@ -23,24 +23,24 @@ public:
     point& operator=( point&& )      = delete;
     point& operator=( const point& ) = delete;
 
-    int x()
+    int x() const
     {
         return m_x;
     }
 
-    int y()
+    int y() const
     {
         return m_y;
     }
 
-    void x( int x )
+    void x( int p_x )
     {
-        m_x = x;
+        m_x = p_x;
     }
 
-    int y( int y )
+    void y( int p_y )
     {
-        m_y = y;
+        m_y = p_y;
     }
 
 private:
@@ -56,5 +56,4 @@ int main()
 
     p1.x( 10 );
     p1.y( 20 );
-
 }
