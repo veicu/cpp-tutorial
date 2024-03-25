@@ -3,6 +3,7 @@
 */
 
 #include <limits>
+#include <climits>
 
 int main()
 {
@@ -12,11 +13,11 @@ int main()
 
     // character type
 
-    char c = 'A';
+    char ch = 'A';
 
     // signed integer typs
 
-    signed char s_c;
+    signed char c;
     short       s;
     int         i;
     long        l;
@@ -36,30 +37,36 @@ int main()
     double      d;
     long double ld;
 
-    // 
+    // size of the object or type in bytes (multiples of the size of char)
 
-    int short_size  = sizeof( short );
-    int int_size    = sizeof( int );
-    int long_size   = sizeof( long );
-    int float_size  = sizeof( float );
-    int double_size = sizeof( double );
+    int size_char   = sizeof( char );
+    int size_short  = sizeof( short );
+    int size_int    = sizeof( int );
+    int size_long   = sizeof( long );
+    int size_float  = sizeof( float );
+    int size_double = sizeof( double );
+
+    int size_c = sizeof( c );
+    int size_i = sizeof( i );
+    int size_d = sizeof( d );
 
     // numeric limits
 
     int int_min = std::numeric_limits<int>::min();
     int int_max = std::numeric_limits<int>::max();
 
-    //
+    int bits_per_byte = CHAR_BIT;
 
-    b = true;
-    b = false;
+    // examples
 
-    int x = 0;
-    x = 7 + 3;
-    x = x + 1;
+    bool valid = false;
+    valid = true;
 
-    double pos = 0;
+    int score = 0;
+    score = 7 + 3;
+    score = score + 1;
+
+    double pos = 0.0;
     pos = 4.5;
     pos = 4.5 + 5.5;
-
 }

@@ -1,5 +1,5 @@
 /*
-    Control.
+    Control structures.
 */
 
 #include <iostream>
@@ -16,9 +16,14 @@ int main()
     {
         std::cout << "x is 0" << std::endl;
     }
+
+    if( x == 1 )
+    {
+        std::cout << "x is 1" << std::endl;
+    }
     else
     {
-        std::cout << "x is not 0" << std::endl;
+        std::cout << "x is not 1" << std::endl;
     }
 
     if( x < -10 )
