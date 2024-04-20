@@ -40,7 +40,7 @@ int main()
     }
 
     //
-    // switch -case
+    // switch case
     //
 
     x = 2;
@@ -94,4 +94,10 @@ int main()
         x++;
     }
     while( x < 10 );
+
+    //
+    // conditional operator
+    //
+
+    // ???
 }

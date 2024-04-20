@@ -38,7 +38,7 @@ int main()
     std::cout << "SIZE: " << translation_map.size() << std::endl;
 
     //
-    // get
+    // get - inserts new item if key does not exist
     //
 
     std::string s = translation_map["Mann"];

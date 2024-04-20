@@ -1,5 +1,5 @@
 /*
-    Classes - Part III
+    Classes - Part III (Inheritance)
 */
 
 class shape

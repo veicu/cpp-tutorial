@@ -4,6 +4,11 @@
 
 #include <iostream>
 
+void foo() // global namespace
+{
+    std::cout << "global::foo" << std::endl;
+}
+
 namespace // unnamed namespace not accessible from other translation units
 {
     void bar()
@@ -12,24 +17,19 @@ namespace // unnamed namespace not accessible from other translation units
     }
 }
 
-void foo()
-{
-    std::cout << "global::foo" << std::endl;
-}
-
-namespace client
+namespace abc // library abc
 {
     void foo()
     {
-        std::cout << "client::foo" << std::endl;
+        std::cout << "library abc::foo" << std::endl;
     }
 }
 
-namespace server
+namespace xyz // library xyz
 {
     void foo()
     {
-        std::cout << "server::foo" << std::endl;
+        std::cout << "library xyz::foo" << std::endl;
     }
 }
 
@@ -52,8 +52,8 @@ int main()
     foo();
     ::foo(); // explicit global namespace
 
-    client::foo();
-    server::foo();
+    abc::foo();
+    xyz::foo();
 
     my_company::my_department::my_function();
 }

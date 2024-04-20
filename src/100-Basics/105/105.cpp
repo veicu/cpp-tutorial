@@ -1,5 +1,5 @@
 /*
-    Classes - Part I
+    Classes - Part I (Basics)
 */
 
 class point
@@ -47,7 +47,6 @@ private:
     int m_x;
     int m_y;
 };
-
 
 int main()
 {
